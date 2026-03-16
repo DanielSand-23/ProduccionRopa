@@ -10,7 +10,6 @@ public class Prenda {
     private String tela;
     private double costoProduccion;
     private String temporada;
-    private List<Lote> lotes;
 
     private static final double PORCENTAJE_GANANCIA_POR_PIEZA = 0.15;
     private static final double PORCENTAJE_GANANCIA_POR_LOTE = 0.05;
@@ -20,25 +19,16 @@ public class Prenda {
         this.modelo = modelo;
         this.tela = tela;
         this.costoProduccion = costoProduccion;
-        this.temporada = temporada;
-        this.lotes = new ArrayList<>();
-    }
+        this.temporada = temporada;}
 
-    public void agregarLote(Lote lote) {
-        lotes.add(lote);
-    }
-
-
-    public double calcularPrecioVentaPorPieza() {
+    public double calcularPrecioVentaPorPieza()
+    {
         return costoProduccion * (1 + PORCENTAJE_GANANCIA_POR_PIEZA);
     }
 
-    public double calcularPrecioVentaPorPiezaEnLote() {
+    public double calcularPrecioVentaPorPiezaEnLote()
+    {
         return costoProduccion * (1 + PORCENTAJE_GANANCIA_POR_LOTE);
-    }
-
-    public List<Lote> getLotes() {
-        return lotes;
     }
 
     public String getGenero()

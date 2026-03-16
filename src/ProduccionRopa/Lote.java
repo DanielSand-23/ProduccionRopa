@@ -14,10 +14,10 @@ public class Lote {
         this.numPiezas = numPiezas;
         this.fechaFabricacion = fechaFabricacion;
         this.prenda = prenda;
-        prenda.agregarLote(this);
     }
 
-    public double calcularCostoProduccionLote() {
+    public double calcularCostoProduccionLote()
+    {
         return numPiezas * prenda.getCostoProduccion();
     }
 
@@ -51,7 +51,7 @@ public class Lote {
                 "numero=" + numero +
                 ", numPiezas=" + numPiezas +
                 ", fechaFabricacion=" + fechaFabricacion +
-                ", prenda=" + prenda.getModelo() +
+                ", prenda=" + prenda +
                 '}';
     }
 }
