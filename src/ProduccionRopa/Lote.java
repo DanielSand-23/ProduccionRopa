@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.Objects;
 
-public class Lote {
+public class Lote implements Comparable <Lote> {
 
     private int numero;
     private int numPiezas;
@@ -15,7 +15,7 @@ public class Lote {
     private static final double PORCENTAJE_GANANCIA_POR_LOTE = 0.05;
 
 
-    private static Comparator<Lote> comparator = new Comparator<Lote>(){
+    private static Comparator <Lote> comparator = new Comparator<Lote>(){
         public int compare(Lote o1, Lote o2){
             return o1.compareTo(o2);
         }
