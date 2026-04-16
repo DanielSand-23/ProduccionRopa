@@ -54,7 +54,7 @@ public class Prenda implements Comparable <Prenda>{
 
     @Override
     public int hashCode() {
-       int result = Objects.hashCode(costoProduccion);
+       int result = Double.hashCode(costoProduccion);
         result = 31 * result + Objects.hashCode(genero);
         result = 31 * result + Objects.hashCode(modelo);
         result = 31 * result + Objects.hashCode(tela);
